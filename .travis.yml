@@ -1,17 +1,25 @@
 language: node_js
-node_js:
-  - "stable"
 cache:
   directories:
-  - node_modules
+    - node_modules
+    - ~/.npm
+node_js:
+  - '18'
+git:
+  depth: 3
 script:
-  - npm run build
+  - yarn test
+notifications:
+  email:
+      recipients:
+        - julyluna10@gmail.com
+      on_success: always
+      on_failure: always
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: de63704f-cde6-4771-98d4-1523e8e998ad
+  app: ic-nodejs
   on:
-    branch: master
-      
-
+    repo: julyluna10/Integraci-n-continua
