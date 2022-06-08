@@ -1,50 +1,17 @@
 language: node_js
-os: osx
-
-git:
-  depth: 3
-
-branches:
-  except:
-  - legacy
-  - experimental
-
-branches:
-  only:
-  - master
-  - stable
-
-before_install:
-  - python
-
-install:
-  - yarn install
-
-script:
-  - yarn deploy
-  - yarn test
-
-before_script:
-  - yarn test
-
-after_script:
-  - yarn clean
-
+node_js:
+  - "stable"
 cache:
   directories:
-    - node_modules
-
-jobs: 
-  include: 
-    -stage: test 
-     script: yarn test
-     script: yarn eslint
-    -stage: deploy
-      script: yarn deploy
-
-deploy: 
-  provider: heroku 
-  on 
-    repo: 
+  - node_modules
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
+  on:
+    branch: master
       
 
