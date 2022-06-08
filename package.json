@@ -1,7 +1,6 @@
 {
-  "name": "node.js",
+  "name": "node",
   "version": "1.0.0",
-  "description": "",
   "main": "suma.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +8,14 @@
   },
   "keywords": [],
   "author": "July Santos",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julyluna10/Integraci-n-continua.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julyluna10/Integraci-n-continua/issues"
+  },
+  "homepage": "https://github.com/julyluna10/Integraci-n-continua#readme",
+  "description": ""
 }

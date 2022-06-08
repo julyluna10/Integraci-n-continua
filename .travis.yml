@@ -4,7 +4,7 @@ cache:
     - node_modules
     - ~/.npm
 node_js:
-  - '18'
+  - '17'
 git:
   depth: 3
 script:
