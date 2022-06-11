@@ -10,6 +10,7 @@ git:
 script:
   - yarn test
 notifications:
+  slack: tpiintegracin-mip7477:c6dNbnQsO5Ka6rx36BvHwnYY
   email:
       recipients:
         - julyluna10@gmail.com
